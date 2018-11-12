@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>双杯布局</title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+				margin-bottom: 10px;				
+			}
+			*{margin: 0;padding:0;}
+			/*方法一*/
+			.main{
+				min-width: 450px;
+				padding: 0 210px;			
+				height: 500px;
+			}
+			.main .center,.main .left,.main .right{
+				text-align: center;
+				color: #fff;
+				font: 18px/50px "微软雅黑";
+				float: left;
+				height: 100%;
+			}
+			.main .left,.main .right{
+				width: 200px;
+				position: relative;
+				background: #008EB7;				
+				z-index: 1;
+			}
+			.main .left{
+				margin-left: -100%;
+				left: -210px;								
+			}
+			.main .right{
+				margin-left: -200px;
+				right: -210px;				
+			}
+			.main .center{
+				width: 100%;
+				background: #00C1DE;
+											
+			}
+			/*方法一*/
+			/*方法二*/
+			.main02{
+				min-width: 450px;
+				position: relative;				
+				padding: 0 210px;			
+				height: 500px;
+			}
+			.main02 .center,.main02 .left,.main02 .right{
+				text-align: center;
+				color: #fff;
+				font: 18px/50px "微软雅黑";
+				
+			}
+			.main02 .left,.main02 .right{
+				width: 200px;
+				position: absolute;
+				background: #008EB7;
+				height:  100%;
+				z-index: 1;
+				left: 0;
+				top: 0;
+			}
+			
+			.main02 .right{
+				left: auto;
+				right:0;
+								
+			}
+			.main02 .center{
+				width: 100%;
+				background: #00C1DE;
+				height: 100%;
+			}
+			/*方法二*/
+		</style>
+	</head>
+	<body>
+		<h1>圣杯/双杯布局一解决方法</h1>
+		<div class="main">
+			<div class="center">我是中间自适应的布局</div>
+			<div class="left">Left</div>
+			<div class="right">Right</div>
+		</div>
+		<h1>圣杯/双杯布局方法二</h1>
+		<div class="main02">
+			<div class="center">我是中间自适应的布局</div>
+			<div class="left">Left</div>
+			<div class="right">Right</div>
+		</div>
+	</body>
+</html>
+
